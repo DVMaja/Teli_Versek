@@ -1,0 +1,105 @@
+body {
+    background-image: url(kepek/hatter.jpg);
+}
+main {
+    width: 85%;
+    max-width: 880px;
+    margin: auto;    
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "h h h"
+                        "n a as"
+                        "f f f";
+
+}
+/*TÁBLÁZAT*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th {    
+    border-bottom: 2px solid blue;
+}
+tbody tr:nth-child(even){
+    background-color: rgb(35, 156, 204);
+}
+thead th{
+    background-color: rgb(35, 156, 204);
+}
+
+/*Fejléc*/
+header {
+    grid-area: h;
+    text-align: center;
+    background-image: url(kepek/fejlec.jpg);
+}
+/*MENÜ*/
+nav {
+    grid-area: n;   
+    padding-right: 10px;
+
+}
+nav ul {
+    list-style-type: none;
+       
+}
+nav li {
+    text-align: center;
+    background-color: blue;    
+    border-radius: 30%;
+    padding: 10px;
+    margin: 5px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    
+}
+article {
+    grid-area: a;
+    border-right: 1px solid black;
+    padding: 5px;
+}
+
+/*JObb OLDALI ASIDE*/
+aside {
+    grid-area: as;
+    padding-left: 20px;
+}
+/*LÁBJEGYZET*/
+footer {
+    grid-area: f;
+    background-color: rgb(43, 131, 231);
+    text-align: center;
+}
+/*Responsivitás*/
+@media screen and (max-width: 700px) {
+    main {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "h h"
+                            "n n"
+                            "a as"                            
+                            "f f";
+    
+    }
+    nav ul {
+        
+    }
+    
+  }
+@media screen and (max-width: 600px) {
+    main {  
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                            "n"
+                            "a"
+                            "as"
+                            "f";
+    
+    }
+    
+    
+  }
+
+
